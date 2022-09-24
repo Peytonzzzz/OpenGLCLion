@@ -1,0 +1,95 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "clang++ Graphics",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c++17",
+                "-stdlib=libc++",
+                "-fdiagnostics-color=always",
+                "-Wall",
+                "-g",
+                "-I${workspaceFolder}/dependencies/include",
+                // "-I${workspaceFolder}/Include",
+                // "-I${workspaceFolder}/Include",
+                // "-I${workspaceFolder}/Include/GLFW/glfw3.h",
+                // "-I${workspaceFolder}/Include/glad.h",
+                "-L${workspaceFolder}/dependencies/library",
+                // "-L${workspaceFolder}/Lib",
+                "${workspaceFolder}/dependencies/library/libglfw.3.3.dylib",
+                
+                "${file}",
+                "${workspaceFolder}/Lib/GLXtras.cpp",
+                "${workspaceFolder}/Apps/glad.c",
+                
+                // "-I${workspaceFolder}/Include/GL/glu.h",
+                // "${workspaceFolder}/Apps/glad.c",
+                "-o",
+                "${workspaceFolder}/output",
+                "-framework",
+                "OpenGL",
+                "-framework",
+                "Cocoa",
+                "-framework",
+                "IOKit",
+                "-framework",
+                "CoreVideo",
+                "-framework",
+                "CoreFoundation",
+                "-Wno-deprecated",
+                "-target",
+                "arm64-apple-darwin21.6.0"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+        },
+        {
+   "type": "cppbuild",
+   "label": "C/C++: clang++ build active file",
+   "command": "/usr/bin/clang++",
+   "args": [
+    "-std=c++17",
+    "-fdiagnostics-color=always",
+    "-Wall",
+    "-g",
+    "-I${workspaceFolder}/dependencies/include",
+    "-L${workspaceFolder}/dependencies/library",
+    "${workspaceFolder}/dependencies/library/libglfw.3.3.dylib",
+    "${file}",
+    "${workspaceFolder}/Apps/glad.c",
+    "-o",
+    "${workspaceFolder}/app",
+    "-framework",
+    "OpenGL",
+    "-framework",
+    "Cocoa",
+    "-framework",
+    "IOKit",
+    "-framework",
+    "CoreVideo",
+    "-framework",
+    "CoreFoundation",
+    "-Wno-deprecated"
+   ],
+   "options": {
+    "cwd": "${fileDirname}"
+   },
+   "problemMatcher": ["$gcc"],
+   "group": {
+    "kind": "build",
+    "isDefault": false
+   },
+   "detail": "compiler: /usr/bin/clang++"
+  }
+    ]
+}

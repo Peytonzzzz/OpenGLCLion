@@ -1,0 +1,85 @@
+<!-- RollingBall.html -->
+<html>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<style type="text/css"> canvas { background: blue; } </style>
+<title> A Blue Marble </title>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec3 point;
+attribute vec3 normal;
+attribute vec2 uv;
+uniform mat4 modelview;
+uniform mat4 persp;
+varying vec3 v_point;
+varying vec3 v_normal;
+varying vec2 v_uv;
+
+void main() {
+    vec4 hPosition = modelview*vec4(point, 1);
+    v_point = hPosition.xyz;
+    gl_Position = persp*hPosition;
+    v_normal = (modelview*vec4(normal, 0)).xyz;
+    v_uv = uv;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+varying vec3 v_point;
+varying vec3 v_normal;
+varying vec2 v_uv;
+uniform vec3 light;
+uniform int useColor; // else texture
+uniform vec3 color;
+uniform int doShadow;
+uniform vec3 ballPosition;
+uniform sampler2D texmap;
+
+float RaySphere(vec3 rb, vec3 rv, vec4 s) {
+    // ray from point=rb, with vector=rv, s.xyz center, s.w radius
+    // return least pos alpha of ray and sphere (or -1 if none)
+    vec3 q = rb-s.xyz;
+    float vDot = dot(rv, q);
+    float sq = vDot*vDot-dot(q, q)+s.w*s.w;
+    if (sq < 0.)
+        return -1.;
+    float root = sqrt(sq), a = -vDot-root;
+    return a > 0.? a : -vDot+root;
+}
+
+void main() {
+    vec3 N = normalize(v_normal);      // surface normal
+    vec3 L = normalize(light-v_point); // light vector
+    vec3 E = normalize(v_point);       // eye vector
+    vec3 R = reflect(L, N);            // highlight vector
+    float d = abs(dot(N, L));          // two-sided diffuse
+    float s = abs(dot(R, E));          // two-sided specular
+    for (int i = 0; i < 8; i++)
+        s = s*s;
+    float intensity = s+d;
+    if (doShadow == 1) {
+        float a = RaySphere(v_point, L, vec4(ballPosition, 1.));
+        if (a >= 0.)
+    	    intensity = .5*intensity;
+    }
+    vec3 c = useColor==1? color : texture2D(texmap, v_uv).rgb;
+    gl_FragColor = vec4(intensity*c, 1);
+}
+</script>
+
+<script type="text/javascript" src="../Common/WebGL-Utils.js"> </script>
+<script type="text/javascript" src="../Common/InitShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"> </script>
+<script type="text/javascript" src="../Common/Quaternion.js"> </script>
+<script type="text/javascript" src="RollingBall.js"></script>
+
+<body>
+<canvas id="gl-canvas" style="border: none;" width="900" height="700">
+Error: no browser support for HTML5 'canvas'
+</canvas>
+<img id="ballImage" src="Earth.jpg" hidden crossorigin></img>
+<img id="quadImage" src="Table.jpg" hidden crossorigin></img>
+<button id="changeMode">Using Quaternion</button>
+<button id="changeColor">Using Color</button>
+</body>
+</html>
