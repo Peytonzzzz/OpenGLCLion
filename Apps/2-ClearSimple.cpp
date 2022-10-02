@@ -1,6 +1,6 @@
 // 2-ClearSimple.cpp
 
-#include <glad/glad.h>
+#include <glad.h>
 #include <GLFW/glfw3.h>
 #include "GLXtras.h"
 
@@ -8,7 +8,7 @@ GLuint program = 0;
 int winWidth = 800, winHeight = 800;
 
 const char *vertexShader = R"(
-	#version 330 core
+	#version 130
 	void main() {
 		vec2 points[] = vec2[4](vec2(-1, -1), vec2(-1, 1), vec2(1, 1), vec2(1, -1));
 		gl_Position = vec4(points[gl_VertexID], 0, 1);
@@ -16,10 +16,34 @@ const char *vertexShader = R"(
 )";
 
 const char *pixelShader = R"(
-	#version 330 core
+	#version 130
 	out vec4 pColor;
 	void main() {
-		pColor = vec4(0, 1, 0, 1);
+		//pColor = vec4(0, 1, 0, 1);
+		// float intensity = (gl_FragCoord.x+gl_FragCoord.y)/1600;
+		// pColor = vec4(intensity, intensity, intensity, 1);
+		
+		// Create a chess board pattern with 8x8 squares
+
+		/* if (mod(gl_FragCoord.x, 64.0) < 32.0 && mod(gl_FragCoord.y, 64.0) < 32.0) {
+        pColor = vec4(0.0, 0.0, 0.0, 1.0);
+    } else if (mod(gl_FragCoord.x, 64.0) < 32.0) {
+        pColor = vec4(1.0, 1.0, 1.0, 1.0);
+    } else if (mod(gl_FragCoord.y, 64.0) < 32.0) {
+        pColor = vec4(1.0, 1.0, 1.0, 1.0);
+    } else {
+        pColor = vec4(0.0, 0.0, 0.0, 1.0);
+    } */
+
+		float x = floor(gl_FragCoord.x / 100.0);
+		float y = floor(gl_FragCoord.y / 100.0);
+		if (mod(x + y, 2.0) == 0.0) {
+			pColor = vec4(0.0, 0.0, 0.0, 1.0);
+		} else {
+			pColor = vec4(1.0, 1.0, 1.0, 1.0);
+		}
+
+
 	}
 )";
 

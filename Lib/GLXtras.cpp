@@ -1,6 +1,6 @@
 // GLXtras.cpp - GLSL support (c) 2019-2022 Jules Bloomenthal
 
-#include <glad/glad.h>
+#include <glad.h>
 #include <GL/glu.h>
 #include "GLXtras.h"
 #include <stdio.h>
@@ -123,7 +123,7 @@ GLuint CompileShaderViaFile(const char *filename, GLint type) {
 GLuint CompileShaderViaCode(const char **code, GLint type) {
 	GLuint shader = glCreateShader(type);
 	if (!shader) {
-		PrintGLErrors();
+		//		PrintGLErrors();
 		return false;
 	}
 	glShaderSource(shader, 1, code, NULL);

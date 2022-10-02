@@ -1,7 +1,7 @@
 // 2-ClearScreen-Mac.cpp - OpenGL test program for Apple Silicon architecture
 
-#include <glad/glad.h>	// GL header file
-#include <GLFW/glfw3.h> // GL toolkit
+#include <glad.h>	// GL header file
+#include <glfw3.h> // GL toolkit
 #include <stdio.h>		// printf, etc
 #include "GLXtras.h"	// convenience routines
 
@@ -12,7 +12,7 @@ int winWidth = 400, winHeight = 400;
 
 // vertex shader: operations before the rasterizer
 const char *vertexShader = R"(
-	#version 330 core
+	#version 410 core
 	in vec2 point;											// 2D point from GPU memory
 	void main() {
 		// REQUIREMENT 1A) transform vertex:
@@ -22,7 +22,7 @@ const char *vertexShader = R"(
 
 // pixel shader: operations after the rasterizer
 const char *pixelShader = R"(
-	#version 330 core
+	#version 410 core
 	out vec4 pColor;
 	void main() {
 		// REQUIREMENT 1B) shade pixel:
@@ -33,7 +33,13 @@ const char *pixelShader = R"(
 void InitVertexBuffer()
 {
 	// REQUIREMENT 3A) create GPU buffer, copy 6 vertices
-	float pts[][2] = {{-1, -1}, {-1, 1}, {1, 1}, {-1, -1}, {1, 1}, {1, -1}};
+	float pts[][2] = {
+          {-1, -1},
+          {-1, 1},
+          {1, 1},
+          {-1, -1},
+          {1, 1},
+          {1, -1}};
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 	// bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
@@ -47,7 +53,7 @@ void Display()
 	glUseProgram(program); // ensure correct program
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	// REQUIREMENT 3B) set vertex feeder
-	VertexAttribPointer(program, "point", 2, 0, (void *)0);
+	VertexAttribPointer(program, "point", 2, 0, (void *) nullptr);
 	glDrawArrays(GL_TRIANGLES, 0, 6);
 	glFlush(); // flush GL ops
 }

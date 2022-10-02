@@ -1,0 +1,7 @@
+# ninja log v5
+2	276	1664474426150144778	CMakeFiles/Downloads.dir/Lib/glad.c.o	50d2b2ed68b324af
+1	384	1664474426259987961	CMakeFiles/Downloads.dir/Lib/GLXtras.cpp.o	5ee916470d5b73be
+2	339	1664647295571550281	CMakeFiles/Downloads.dir/Apps/4-ColorfulTriangle.cpp.o	ee48c89e37a3addc
+339	391	1664647295625288438	Downloads	9d7b47c597d61a6a
+1	275	1664474583521100555	CMakeFiles/Downloads.dir/Apps/3-RayTrace.cpp.o	68c4e893d4248915
+2	414	1664647286518325393	CMakeFiles/Downloads.dir/Apps/2-ClearScreen-Mac.cpp.o	48c0fb0c08fea96e

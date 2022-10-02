@@ -1,6 +1,6 @@
 // RayTrace.glsl: ray-tracing pixel shader
 
-#version 130
+#version 410 core
 
 // ----- Application Data
 

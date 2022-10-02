@@ -6,6 +6,10 @@
 #include <time.h>
 #include "GLXtras.h"
 
+// ********
+bool simulateMac = true, useQuads = false;
+// ********
+
 // one light, six planes, three spheres
 vec3 light(2, 0, 1);
 vec4 planes[] = {vec4(-1,0,0,-3), vec4(1,0,0,-3), vec4(0,-1,0,-3), vec4(0,1,0,-3), vec4(0,0,-1,-3), vec4(0,0,1,-3)};
@@ -38,7 +42,7 @@ void Display() {
     }
     // transfer sphere data to shaders, redraw
     SetUniform4v(shader, "spheres", 3, &xSpheres[0].x);
-    glDrawArrays(GL_QUADS, 0, 4);
+    glDrawArrays(GL_TRIANGLES, 0, 4);
     glFlush();
 }
 
@@ -46,6 +50,14 @@ int main(int ac, char **av) {
     // init window
     if (!glfwInit())
         return 1;
+  if (simulateMac) {
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+#ifdef __APPLE__
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+#endif
+  }
     GLFWwindow *w = glfwCreateWindow(winWidth, winHeight, "Ray Trace", NULL, NULL);
     if (!w) {
         glfwTerminate();

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Downloads" targetName="Downloads" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ff9cfb5-b6ad-4124-a6f2-4929116e29a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/Camera.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/CameraArcball.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/Draw.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/Letters.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/Mesh.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/Misc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/Quaternion.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/STB_Image.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/STB_Image_Write.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/Sprite.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/Text.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/Widgets.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/fltdefs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/config/ftconfig.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/config/ftheader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/config/ftmodule.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/config/ftoption.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/config/ftstdlib.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/freetype.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftbbox.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftbdf.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftbitmap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftcache.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftchapters.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/fterrdef.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/fterrors.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftgasp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftglyph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftgxval.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftgzip.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftimage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftincrem.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftlcdfil.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftlist.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftlzw.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftmac.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftmm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftmodapi.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftmoderr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftotval.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftoutln.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftpfr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftrender.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftsizes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftsnames.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftstroke.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftsynth.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftsystem.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/fttrigon.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/fttypes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftwinfnt.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ftxf86.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/t1tables.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ttnameid.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/tttables.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/tttags.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/freetype/ttunpat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/ft2build.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/gl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/glad.3.2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/glad.4.3.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/glfw3.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/glfw3native.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Include/glu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Include/KHR/khrplatform.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/2-ClearScreen-Mac.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/2-ClearScreen-Mac.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/2-ClearSimple.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/2-ClearSimple.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/3-RayTrace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/3-RayTrace.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/3-RayTrace.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/3-RayTrace.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/4-ColorfulTriangle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/4-ColorfulTriangle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/7-CubePersp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/7-CubePersp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/TextureMeasure.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/glad.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Include/glad.h" beforeDir="false" afterPath="$PROJECT_DIR$/Include/glad.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lib/GLXtras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Lib/GLXtras.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lib/glad.c" beforeDir="false" afterPath="$PROJECT_DIR$/Lib/glad.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Setup/SetupFreetype.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Setup/SetupOpenGL-CodeBlocks.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Setup/SetupOpenGL-VisualStudio.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.dSYM/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.dSYM/Contents/Resources/DWARF/app" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/include/GL/gl.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Include/GL/gl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/include/GL/glu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Include/GL/glu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/include/GLFW/glfw3.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Include/GLFW/glfw3.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/include/GLFW/glfw3native.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Include/GLFW/glfw3native.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/include/GLXtras.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Include/GLXtras.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/include/KHR/khrplatform.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Include/KHR/khrplatform.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/include/VecMat.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Include/VecMat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/include/glad/glad.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Include/glad.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/library/libglfw.3.3.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.dSYM/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.dSYM/Contents/Resources/DWARF/output" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2021" />
+    <option name="minorVersion" value="3.4" />
+  </component>
+  <component name="ProjectId" id="2FBJzsYB6ydd7RKeYnnAqoBWAKx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nirmalya/Dropbox/SeattleU/Fall 2022/Graphics/Downloads&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Lib" />
+      <recent name="$PROJECT_DIR$/dependencies/library" />
+      <recent name="$PROJECT_DIR$/dependencies/include" />
+      <recent name="$PROJECT_DIR$/Include" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Lib" />
+      <recent name="$PROJECT_DIR$/dependencies/library" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Downloads" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Downloads" TARGET_NAME="Downloads" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Downloads" RUN_TARGET_NAME="Downloads">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ff9cfb5-b6ad-4124-a6f2-4929116e29a2" name="Changes" comment="" />
+      <created>1663959810937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663959810937</updated>
+      <workItem from="1663959812032" duration="13000" />
+      <workItem from="1663959847049" duration="713000" />
+      <workItem from="1663960726302" duration="779000" />
+      <workItem from="1664068528943" duration="84000" />
+      <workItem from="1664228909636" duration="36494000" />
+      <workItem from="1664474529669" duration="1353000" />
+      <workItem from="1664647092245" duration="229000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Apps/3-RayTrace.cpp</url>
+          <line>52</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Apps/3-RayTrace.cpp</url>
+          <line>60</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Apps/3-RayTrace.cpp</url>
+          <line>65</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
