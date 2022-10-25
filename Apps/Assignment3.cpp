@@ -5,22 +5,38 @@
 #include <stdio.h>
 #include "GLXtras.h"
 #include "VecMat.h"
+#include "time.h"
 
 // GPU identifiers
 GLuint VBO = 0, VAO = 0; // GPU vertex buffer ID
 GLuint program = 0;		 // GLSL program ID
-
 // a triangle (3 2D locations, 3 RGB colors)
-vec2 points[] = { {-.9f, -.6f}, {0.f,  .6f}, {.9f,  -.6f} };
-vec3 colors[] = { {0, 0, 1}, {1, 0, 0}, {0, 1, 0} };
-
+vec2 points[] = { {-.5f, .4f}, {-.5f, .5f}, {.0f, .4f},
+                  {.0f, .5f},{.4f,.4f},{.5f,.5f},
+                  {.5f,.4f},{.2f,.2f},{.2f,.1f},
+                  {.0f,-.1f},{-.3f,-.3f},{-.3f,-.4f},
+                  {-.5f,-.5f},{-.3f,-.5f},
+                  {.0f,-.5f},{.2f,-.4f},{.5f,-.5f},
+                  {.5f,-.4f}};
+vec3 colors[] = { {0, 0, 1}, {1, 0, 0}, {0, 1, 0},
+                  {0, 0, 1}, {1, 0, 0}, {0, 1, 0}, 
+                  {0, 0, 1}, {1, 0, 0},{0, 1, 0},
+                  {0, 0, 1}, {1, 0, 0}, {0, 1, 0},
+                  {0, 0, 1}, {1, 0, 0}, {0, 1, 0},
+                  {0, 0, 1}, {1, 0, 0}, {0, 1, 0}};
+int triangles[][3]={{0,1,2},{1,2,3},{3,2,4},{3,5,4},{5,6,7},{7,6,8},{7,8,9},
+                    {7,9,10},{9,10,11},{10,11,12},{11,12,13},{11,13,14},
+                    {11,14,15},{14,15,16},{15,16,17}};
+time_t startTime = clock();
+float degPerSec=25;
 const char *vertexShader = R"(
 	#version 410 core
 	in vec2 point;
 	in vec3 color;
 	out vec3 vColor;
+    uniform mat4 view;
 	void main() {
-		gl_Position = vec4(point, 0, 1);
+		gl_Position = view*vec4(point, 0, 1);
 		vColor = color;
 	}
 )";
@@ -46,7 +62,12 @@ void Display() {
   // associate color input to shader with color array in vertex buffer
   VertexAttribPointer(program, "color", 3, 0, (void *) sizeof(points));
   // render three vertices as a triangle
-  glDrawArrays(GL_TRIANGLES, 0, 3);
+  float dt = (float)(clock()-startTime)/CLOCKS_PER_SEC;
+  float degAng = dt * degPerSec;
+  mat4 view = RotateZ(degAng);
+  SetUniform(program,"view",view);
+  int nVertices = sizeof(triangles)/sizeof(int);
+  glDrawElements(GL_TRIANGLES, nVertices, GL_UNSIGNED_INT, triangles);
   glFlush();
 }
 
@@ -57,13 +78,13 @@ void BufferVertices() {
   glBindVertexArray(VAO);
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
   // allocate buffer memory to hold vertex locations and colors
-  int sPoints = sizeof(points), sColors = sizeof(colors);
-  glBufferData(GL_ARRAY_BUFFER, sPoints + sColors, NULL, GL_STATIC_DRAW);
-  // load data to the GPU
-  glBufferSubData(GL_ARRAY_BUFFER, 0, sPoints, points);
-  // start at beginning of buffer, for length of points array
-  glBufferSubData(GL_ARRAY_BUFFER, sPoints, sColors, colors);
-  // start at end of points array, for length of colors array
+    int sPoints = sizeof(points), sColors = sizeof(colors);
+    glBufferData(GL_ARRAY_BUFFER, sPoints+sColors, NULL, GL_STATIC_DRAW);
+// copy data to GPU
+    glBufferSubData(GL_ARRAY_BUFFER, 0, sPoints, points);
+// start at beginning of buffer, for length of points array
+    glBufferSubData(GL_ARRAY_BUFFER, sPoints, sColors, colors);
+// start at end of points array, for length of colors array
 }
 
 // application
